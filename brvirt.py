@@ -123,7 +123,7 @@ def get_vm_data():
            'vm_name': 'cobbler'}}
 
     """
-    active_vm_patt = re.compile(r'(\d+) {5}(\S+)')
+    active_vm_patt = re.compile(r'(\d+)\s+(\S+)')
     # get active vm_id, vm_name pairs: [('4', 'nuage-dns'), ('8', 'cobbler')]
     active_vm_list = subprocess.check_output('virsh list | tail -n +3', shell=True, universal_newlines=True)
 
